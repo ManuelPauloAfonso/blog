@@ -11,5 +11,9 @@ export default function Link({ title, route }: props) {
   const [clicked, setCliked] = useState(false);
 
   const ativeClasses = classNames("text-blue-500", clicked && "font-bold");
-  return <NextLink href={route}>{title}</NextLink>;
+  return (
+    <NextLink className="hover:text-orange-400" href={route}>
+      {title}
+    </NextLink>
+  );
 }
